@@ -51,7 +51,7 @@ export default function ProjectsSlider() {
   };
 
   return (
-    <section className="relative bg-black text-white px-4 py-16">
+    <section id="projects" className="relative bg-black text-white px-4 py-16">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 items-center gap-8 mb-10">
           <div>

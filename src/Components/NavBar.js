@@ -47,16 +47,15 @@ const NavBar = () => {
           {/* Desktop Nav Links */}
           <nav className="hidden lg:flex gap-6 text-sm font-medium text-gray-700">
             <a
-              href="#"
+              href="/"
               className="text-green-600 font-semibold border-b-2 border-green-500"
             >
               Home
             </a>
-            <a href="#">Company</a>
-            <a href="#">Services</a>
-            <a href="#">Projects</a>
-            <a href="#">News</a>
-            <a href="#">Contact Us</a>
+            <a href="/about-us">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="/contact-us">Contact Us</a>
           </nav>
 
           {/* Right Side - Actions */}
@@ -79,12 +78,11 @@ const NavBar = () => {
         {/* Mobile Nav Links */}
         {menuOpen && (
           <div className="lg:hidden flex flex-col items-start gap-3 px-6 pb-4 text-sm font-medium text-gray-700 bg-white">
-            <a href="#" className="text-green-600 font-semibold">Home</a>
-            <a href="#">Company</a>
-            <a href="#">Services</a>
-            <a href="#">Projects</a>
-            <a href="#">News</a>
-            <a href="#">Contact Us</a>
+            <a href="/" className="text-green-600 font-semibold">Home</a>
+            <a href="/about-us">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="/contact-us">Contact Us</a>
           </div>
         )}
       </div>

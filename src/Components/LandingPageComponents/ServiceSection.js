@@ -66,7 +66,7 @@ export default function ServiceSection() {
   };
 
   return (
-    <section className="bg-[#111] text-white py-16 px-4 sm:px-6 md:px-12 overflow-hidden w-screen">
+    <section id="services" className="bg-[#111] text-white py-16 px-4 sm:px-6 md:px-12 overflow-hidden w-screen">
       {/* Top Section */}
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6 items-start">
         <div>
