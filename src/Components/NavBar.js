@@ -38,10 +38,10 @@ const NavBar = () => {
 
       {/* Main Nav */}
       <div className="w-full bg-white shadow-md z-50">
-        <div className="max-w-7xl mx-auto px-4 md:px-10 py-4 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-4 md:px-10 flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <img src="/logo.png" alt="logo" className="h-10 w-auto" />
+            <img src="/logo.png" alt="logo" className="h-[120px] w-auto" />
           </div>
 
           {/* Desktop Nav Links */}
