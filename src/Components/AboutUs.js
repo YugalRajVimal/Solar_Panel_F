@@ -22,7 +22,7 @@ const AboutUs = () => {
         <div className="flex flex-wrap justify-center gap-10">
           <div><h4 className="text-3xl font-bold">6,154</h4><p>Projects Completed</p></div>
           <div><h4 className="text-3xl font-bold">2,512</h4><p>Employees & Workers</p></div>
-          <div><h4 className="text-3xl font-bold">241</h4><p>Awards & Milestones</p></div>
+          <div><h4 className="text-3xl font-bold">98%</h4><p>Customer Satisfaction Across All Projects</p></div>
         </div>
       </section>
 
@@ -38,8 +38,6 @@ const AboutUs = () => {
 
       {/* Founder Section */}
       <section className="py-12 bg-white text-center">
-        <h3 className="text-2xl font-semibold mb-4">Michael Brian</h3>
-        <p className="italic mb-2">Solatec Founder</p>
         <p className="mb-4 font-medium">Making Tomorrow Different Today.</p>
         <p className="max-w-3xl mx-auto text-gray-600">
           Our solar business creates PV material solutions that reduce costs and improve performance of solar energy products.

@@ -30,9 +30,9 @@ export default function SolarEnergySection() {
             </p>
           </div>
           <div>
-            <h2 className="text-green-600 text-5xl font-semibold">241</h2>
+            <h2 className="text-green-600 text-5xl font-semibold">98%</h2>
             <p className="mt-1 text-gray-700 font-medium">
-              Awards Milestones Awarded To Us
+              Customer Satisfaction Across All Projects
             </p>
           </div>
         </div>
@@ -60,23 +60,32 @@ export default function SolarEnergySection() {
           </p>
           <p className="text-gray-500 text-sm leading-relaxed">
             The increase in extreme weather events and rising sea levels are
-            unmistakable signs of climate change. Roughly 850 million people
-            still live without access to electricity, which is the foundation of
-            sustainable development.
+            unmistakable signs of climate change. These challenges threaten
+            ecosystems, economies, and human well-being across the globe. At the
+            same time, roughly 850 million people still live without access to
+            electricity, which is the foundation of sustainable development and
+            a basic human right. Reliable energy access enables education,
+            healthcare, clean water, and economic opportunity. The urgent
+            question we face is: how can we meet the growing demand for
+            electricity while protecting our climate? The answer lies in
+            accelerating the transition to renewable energy, especially solar
+            power, and investing in clean, inclusive technologies that empower
+            communities, reduce emissions, and build a more resilient, equitable
+            future.
           </p>
-          <p className="text-gray-500 text-sm leading-relaxed">
+          {/* <p className="text-gray-500 text-sm leading-relaxed">
             How can we meet the growing demand for electricity while protecting
             our climate and make planet a better place?
-          </p>
+          </p> */}
 
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between pt-4 gap-4">
-            <button className="bg-black text-white px-5 py-2 rounded-md flex items-center gap-2 hover:bg-gray-800 transition w-max">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-end pt-4 gap-4">
+            {/* <button className="bg-black text-white px-5 py-2 rounded-md flex items-center gap-2 hover:bg-gray-800 transition w-max">
               <IoArrowForwardCircle className="text-xl" />
               Learn More
-            </button>
+            </button> */}
             <div>
-              <p className="font-semibold">Michael Brian</p>
-              <p className="text-green-600 text-sm">Solatec Founder</p>
+              <p className="font-semibold">by RJ Solar</p>
+              <p className="text-green-600 text-sm">Technology</p>
             </div>
           </div>
         </div>

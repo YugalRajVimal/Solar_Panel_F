@@ -30,6 +30,58 @@ export default function HeroSection() {
       belowHeading:
         "As a world wide distributor of solar supplies we endeavor to provide fast and knowledgeable service, we can get you materials by sea or air.",
     },
+    {
+      imageLink: "/LandingPage/HeroSectionImage3.jpeg",
+      topHeading: "Complete Commercial, Residential & Industrial Solar Systems",
+      midHeading: (
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
+          Powering Tomorrow
+          <br />
+          With Clean Energy
+        </h1>
+      ),
+      belowHeading:
+        "From small homes to large-scale industrial projects, our solar solutions are designed to meet every need efficiently and sustainably.",
+    },
+    {
+      imageLink: "/LandingPage/HeroSectionImage4.jpeg",
+      topHeading: "Complete Commercial, Residential & Industrial Solar Systems",
+      midHeading: (
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
+          Your Trusted Partner
+          <br />
+          In Renewable Energy
+        </h1>
+      ),
+      belowHeading:
+        "With expert guidance and global logistics, we deliver solar technology to every corner of the world—quickly and reliably.",
+    },
+    {
+      imageLink: "/LandingPage/HeroSectionImage5.jpeg",
+      topHeading: "Complete Commercial, Residential & Industrial Solar Systems",
+      midHeading: (
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
+          Lighting The Way
+          <br />
+          To A Greener Planet
+        </h1>
+      ),
+      belowHeading:
+        "Our end-to-end solar services ensure a seamless transition to renewable energy for residential, commercial, and industrial clients.",
+    },
+    {
+      imageLink: "/LandingPage/HeroSectionImage6.jpeg",
+      topHeading: "Complete Commercial, Residential & Industrial Solar Systems",
+      midHeading: (
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
+          Sustainable Energy,
+          <br />
+          Global Reach
+        </h1>
+      ),
+      belowHeading:
+        "As a global solar provider, we make it easy to go green with fast delivery and expert support across all sectors.",
+    },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);

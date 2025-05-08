@@ -47,10 +47,10 @@ const ContactUs = () => {
                 <FaMapMarkerAlt /> view on map
               </a>
               <div className="flex items-center gap-2 mt-1 text-black">
-                <FaPhoneAlt /> (+91) 999999999
+                <FaPhoneAlt /> +918279983842
               </div>
               <div className="flex items-center gap-2 mt-1 text-black">
-                <FaEnvelope /> info@abcd.com
+                <FaEnvelope /> rjsolartechnology@gmail.com
               </div>
             </p>
           </div>

@@ -19,7 +19,7 @@ const Footer = () => {
             >
               <path d="M2 2.5A.5.5 0 012.5 2h1a.5.5 0 01.5.5V5a.5.5 0 01-.5.5h-1A.5.5 0 012 5V2.5zM5 2a2 2 0 00-2 2v1h2.5a.5.5 0 01.5.5v2a.5.5 0 01-.5.5H3v1a2 2 0 002 2h1.5a.5.5 0 01.5.5V16a.5.5 0 01-.5.5H3a2 2 0 01-2-2V4a2 2 0 012-2h2z" />
             </svg>
-            55 654 541 17
+            8279983842
           </p>
           <p class="mt-4 text-sm">
             2307 Beverley Rd Brooklyn, New York 11226 United States.

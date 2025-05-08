@@ -17,7 +17,7 @@ const NavBar = () => {
         <div className="flex flex-wrap gap-3 justify-center md:justify-start">
           <div className="flex items-center gap-1">
             <MdEmail />
-            <p>Email: email.com</p>
+            <p>Email: rjsolartechnology@gmail.com</p>
           </div>
           <div className="flex items-center gap-1">
             <FaClock />
@@ -62,14 +62,19 @@ const NavBar = () => {
           <div className="flex items-center gap-4">
             <div className="hidden sm:flex items-center gap-2 text-sm">
               <FaPhoneAlt className="text-green-600" />
-              <span>55 654 541 17</span>
+              <span>8279983842</span>
             </div>
-            <BsCart3 className="text-xl text-gray-600" />
-            <button className="bg-green-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-600 transition">
-              Request A Quote
-            </button>
+            <a href="mailto:rjsolartechnology@gmail.com">
+              <button className="bg-green-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-600 transition">
+                Mail Us
+              </button>
+            </a>
+
             {/* Mobile Menu Toggle */}
-            <div className="lg:hidden text-2xl cursor-pointer ml-2" onClick={() => setMenuOpen(!menuOpen)}>
+            <div
+              className="lg:hidden text-2xl cursor-pointer ml-2"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
               {menuOpen ? <HiX /> : <HiMenuAlt3 />}
             </div>
           </div>
@@ -78,7 +83,9 @@ const NavBar = () => {
         {/* Mobile Nav Links */}
         {menuOpen && (
           <div className="lg:hidden flex flex-col items-start gap-3 px-6 pb-4 text-sm font-medium text-gray-700 bg-white">
-            <a href="/" className="text-green-600 font-semibold">Home</a>
+            <a href="/" className="text-green-600 font-semibold">
+              Home
+            </a>
             <a href="/about-us">About Us</a>
             <a href="#services">Services</a>
             <a href="#projects">Projects</a>
