@@ -121,7 +121,7 @@ const CustomerExperience = () => {
     <div className="p-6 md:px-20 mx-auto bg-white rounded ">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
         {/* Ratings */}
-        <div className="flex-1">
+        <div className="w-full md:w-[70%]">
           <h2 className="text-2xl font-bold mb-4">Ratings & Reviews</h2>
           <div className="text-4xl font-semibold">
             4.5 <span className="text-xl">/ 5</span>
@@ -137,7 +137,7 @@ const CustomerExperience = () => {
           <div className="text-sm text-gray-600 mb-4">25 Reviews</div>
 
           {ratingsData.map(({ stars, percent }) => (
-            <div key={stars} className="flex  items-center mb-2">
+            <div key={stars} className="flex items-center mb-2">
               <span className="w-16  text-sm text-gray-700 w-[10%]">{stars}</span>
               <div className="flex-1 bg-gray-200 h-10 mx-2 rounded">
                 <div
@@ -151,7 +151,7 @@ const CustomerExperience = () => {
         </div>
 
         {/* User Satisfaction */}
-        <div className="flex-1 w-full md:max-w-sm">
+        <div className="w-full md:w-[30%]">
           <h2 className="text-xl font-bold mb-4">User Satisfaction</h2>
           <div className="grid grid-cols-3 gap-4">
             {satisfactionData.map(({ label, percent }) => (

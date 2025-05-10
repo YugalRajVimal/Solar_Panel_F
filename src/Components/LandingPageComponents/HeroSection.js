@@ -17,19 +17,19 @@ export default function HeroSection() {
       belowHeading:
         "As a world wide distributor of solar supplies we endeavor to provide fast and knowledgeable service, we can get you materials by sea or air.",
     },
-    {
-      imageLink: "/LandingPage/HeroSectionImage2.jpg",
-      topHeading: "Complete Commercial, Residential & Industrial Solar Systems",
-      midHeading: (
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
-          Energize Society By
-          <br />
-          Reliable Energy!
-        </h1>
-      ),
-      belowHeading:
-        "As a world wide distributor of solar supplies we endeavor to provide fast and knowledgeable service, we can get you materials by sea or air.",
-    },
+    // {
+    //   imageLink: "/LandingPage/HeroSectionImage2.jpg",
+    //   topHeading: "Complete Commercial, Residential & Industrial Solar Systems",
+    //   midHeading: (
+    //     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
+    //       Energize Society By
+    //       <br />
+    //       Reliable Energy!
+    //     </h1>
+    //   ),
+    //   belowHeading:
+    //     "As a world wide distributor of solar supplies we endeavor to provide fast and knowledgeable service, we can get you materials by sea or air.",
+    // },
     {
       imageLink: "/LandingPage/HeroSectionImage3.jpeg",
       topHeading: "Complete Commercial, Residential & Industrial Solar Systems",

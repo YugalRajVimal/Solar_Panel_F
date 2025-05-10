@@ -4,34 +4,35 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const projects = [
   {
-    image: "/LandingPage/Project1.jpg",
+    image: "/LandingPage/Project00001.jpg",
     category: "Finance, Supply Chain",
     title: "Expanding The Solar Supply Chain Finance Program",
   },
   {
-    image: "/LandingPage/Project2.jpg",
-    category: "Wind Energy, Innovations",
-    title: "Addressing Wind Energy Innovation Challenges",
+    image: "/LandingPage/Project00002.jpg",
+    category: "Customized Solar Solutions",
+    title: "Tailored designs based on your location, energy needs, and budget.",
   },
   {
-    image: "/LandingPage/Project3.jpg",
-    category: "Electric Vehicle, Infrastructures",
-    title: "Smarter Ways To Manage EV Charging Infrastructures",
+    image: "/LandingPage/Project00003.jpg",
+    category: "High-Quality Solar Panels & Equipment",
+    title:
+      "We use only premium, high-efficiency panels and inverters with long warranties.",
   },
   {
-    image: "/LandingPage/Project4.jpg",
-    category: "Green Energy, ECO",
-    title: "New Public Attitude Tracker Towards Renewable Energy",
+    image: "/LandingPage/Project00004.jpg",
+    category: "Flexible Financing Options",
+    title: "EMI and leasing plans to make solar affordable for everyone.",
   },
   {
-    image: "/LandingPage/Project5.jpg",
-    category: "Infrastructures, Gas",
-    title: "Dangerous Environmental Impacts of Natural Gas",
+    image: "/LandingPage/Project00005.jpg",
+    category: "Fast & Hassle-Free Installation",
+    title: "Timely execution with minimal disruption to your daily routine.",
   },
   {
-    image: "/LandingPage/Project6.jpg",
-    category: "Finance Supply Chain",
-    title: "Expanding The Solar Supply Chain Finance Program",
+    image: "/LandingPage/Project00006.jpg",
+    category: "Remote Monitoring & Smart Tracking",
+    title: "Real-time performance tracking apps and tools for your solar system.",
   },
 ];
 

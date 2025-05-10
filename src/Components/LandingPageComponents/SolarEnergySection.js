@@ -40,14 +40,14 @@ export default function SolarEnergySection() {
         {/* Middle Column - Image with play button */}
         <div className="relative w-full lg:w-[40%]">
           <img
-            src="/LandingPage/SolarEnerySectionImage.jpg"
+            src="/LandingPage/SolarEnerySectionImage.png"
             alt="Wind Turbine"
             className="rounded-xl w-full h-auto object-cover"
           />
-          <button className="absolute top-4 left-4 bg-white px-4 py-2 rounded-md shadow-md flex items-center gap-2 font-semibold text-sm">
+          {/* <button className="absolute top-4 left-4 bg-white px-4 py-2 rounded-md shadow-md flex items-center gap-2 font-semibold text-sm">
             <FaPlay className="text-green-600" />
             Watch Our Intro!
-          </button>
+          </button> */}
         </div>
 
         {/* Right Column - Description */}
