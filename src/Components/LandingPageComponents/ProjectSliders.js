@@ -96,7 +96,7 @@ export default function ProjectsSlider() {
         {/* Project Cards */}
         <div
           ref={sliderRef}
-          className="relative md:ml-16 pr-6 flex gap-4 w-full overflow-x-scroll scroll-smooth scrollbar-hide"
+          className="relative  md:pl-6 flex gap-4 w-full overflow-x-scroll scroll-smooth scrollbar-hide"
         >
           {projects.map((project, index) => (
             <div
