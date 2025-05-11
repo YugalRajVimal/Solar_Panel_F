@@ -3,6 +3,7 @@ import {
   FaMapMarkerAlt,
   FaBuilding,
   FaEnvelope,
+  FaMapPin,
 } from "react-icons/fa";
 
 const ContactUs = () => {
@@ -32,20 +33,22 @@ const ContactUs = () => {
               REGISTERED OFFICE
             </h4>
             <p className="text-sm text-gray-700 ml-6">
-              G-13,
-              <br />
-              Sector 6, Noida
-              <br />
-              Uttar Pradesh
-              <br />
-              <a
+              <p className="flex items-center gap-2">
+                <span>
+                  <FaMapPin />
+                </span>
+                Near Mother India school Bus stand,
+                <br />
+                Etawah 206001
+              </p>
+              {/* <a
                 href="https://maps.google.com"
                 target="_blank"
                 rel="noreferrer"
                 className="text-blue-700 flex items-center gap-1 mt-1"
               >
                 <FaMapMarkerAlt /> view on map
-              </a>
+              </a> */}
               <div className="flex items-center gap-2 mt-1 text-black">
                 <FaPhoneAlt /> +918279983842
               </div>
@@ -95,7 +98,7 @@ const ContactUs = () => {
       </div>
       <div className="w-full pt-14">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7007.175783145828!2d77.30517591559506!3d28.582135273725672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce45e3eccb8a7%3A0xd5eb60e62b19e6ba!2sSector%2015%2C%20Noida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1746266105696!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56986.33049457797!2d78.97625221197741!3d26.78756288710466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3975dfd884cf6219%3A0x6aa136334cfc04c5!2sEtawah%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1746941081027!5m2!1sen!2sin"
           className="w-full h-[500px] border-0"
           allowfullscreen=""
           loading="lazy"

@@ -1,6 +1,10 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
@@ -38,6 +42,31 @@ const projects = [
 
 export default function ProjectsSlider() {
   const sliderRef = useRef(null);
+  const cardsRef = useRef([]);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      cardsRef.current.forEach((card, index) => {
+        gsap.fromTo(
+          card,
+          { opacity: 0, y: 50 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            delay: index * 0.1,
+            scrollTrigger: {
+              trigger: card,
+              start: "top 80%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
 
   const scrollLeft = () => {
     if (sliderRef.current) {
@@ -78,17 +107,10 @@ export default function ProjectsSlider() {
         {/* Arrows */}
         <div className="absolute hidden md:absolute top-0 left-0 w-[188px] h-full flex justify-center items-center gap-4 mt-6 z-10">
           <div className="flex flex-col items-center gap-1 text-white text-6xl">
-            <button
-              onClick={scrollRight}
-              className="p-2 rounded-full text-white transition"
-            >
+            <button onClick={scrollRight} className="p-2 rounded-full">
               <IoIosArrowForward />
             </button>
-
-            <button
-              onClick={scrollLeft}
-              className="p-2 rounded-full text-white transition"
-            >
+            <button onClick={scrollLeft} className="p-2 rounded-full">
               <IoIosArrowBack />
             </button>
           </div>
@@ -97,11 +119,12 @@ export default function ProjectsSlider() {
         {/* Project Cards */}
         <div
           ref={sliderRef}
-          className="relative  md:pl-6 flex gap-4 w-full overflow-x-scroll scroll-smooth scrollbar-hide"
+          className="relative md:pl-6 flex gap-4 w-full overflow-x-scroll scroll-smooth scrollbar-hide"
         >
           {projects.map((project, index) => (
             <div
               key={index}
+              ref={(el) => (cardsRef.current[index] = el)}
               className="bg-white rounded-lg w-full md:w-[30%] overflow-hidden text-black shrink-0"
             >
               <img

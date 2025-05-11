@@ -1,8 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
+
 import { RiArrowLeftWideFill, RiArrowRightWideFill } from "react-icons/ri";
 import { IoArrowForwardCircle } from "react-icons/io5";
 
 export default function HeroSection() {
+  const contentRef = useRef(null);
+
+  
+
   const HeroSectionData = [
     {
       imageLink: "/LandingPage/HeroSectionImage1.jpg",
@@ -87,6 +93,16 @@ export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [fade, setFade] = useState(true);
 
+  useEffect(() => {
+    if (fade) {
+      gsap.fromTo(
+        contentRef.current,
+        { y: 150, opacity: 0, duration: 1.5 },
+        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" }
+      );
+    }
+  }, [currentSlide, fade]);
+
   const handleSlideChange = (direction) => {
     setFade(false);
     setTimeout(() => {
@@ -125,6 +141,7 @@ export default function HeroSection() {
 
       {/* Hero Content */}
       <div
+        ref={contentRef}
         className={`relative z-20 h-full w-full flex flex-col justify-center px-4 sm:px-8 md:px-16 text-white max-w-3xl transition-opacity ease-in-out duration-500 ${
           fade ? "opacity-100" : "opacity-0"
         }`}

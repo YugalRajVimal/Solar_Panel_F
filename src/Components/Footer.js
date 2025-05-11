@@ -12,14 +12,13 @@ const Footer = () => {
             our team.
           </p>
           <p class="text-green-500 flex items-center gap-2 mt-2">
-            <FaPhone className="rotate-90"/>
+            <FaPhone className="rotate-90" />
             8279983842
           </p>
           <p class="mt-4 text-sm flex items-center gap-2 mt-2">
-          <FaMapPin className=""/>
-            2307 Beverley Rd Brooklyn, New York 11226 United States.
+            <FaMapPin className="" />
+            Near Mother India school Bus stand, Etawah 206001
           </p>
-          
         </div>
 
         <div>
@@ -88,7 +87,6 @@ const Footer = () => {
         <div class="space-x-4 mb-2 md:mb-0">
           <a href="#">Terms & Conditions</a>
           <a href="#">Privacy Policy</a>
-
         </div>
         <p class="text-gray-400">
           © 2025 RJ Solar Technology, All Rights Reserved. With Love by{" "}

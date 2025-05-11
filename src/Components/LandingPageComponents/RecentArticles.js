@@ -1,4 +1,10 @@
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowRight } from "lucide-react";
+
+// Register the ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
 const articles = [
   {
@@ -29,6 +35,23 @@ const articles = [
 ];
 
 export default function RecentArticles() {
+  // useEffect(() => {
+  //   // Animate each article card as it comes into the viewport
+  //   gsap.utils.toArray(".article-card").forEach((card, index) => {
+  //     gsap.from(card, {
+  //       // opacity: 0,
+  //       y: 150,
+  //       duration: 1.2,
+  //       delay: index * 0.2, // Staggered delay for each card
+  //       scrollTrigger: {
+  //         trigger: card,
+  //         start: "top 90%", 
+  //         toggleActions: "play none none none"
+  //       },
+  //     });
+  //   });
+  // }, []);
+
   return (
     <section className="py-12 px-4 max-w-7xl mx-auto">
       <div className="text-center mb-10">
@@ -39,7 +62,7 @@ export default function RecentArticles() {
         {articles.map((article, index) => (
           <div
             key={index}
-            className="bg-white rounded-lg overflow-hidden shadow hover:shadow-md transition duration-300"
+            className="article-card bg-white rounded-lg overflow-hidden shadow hover:shadow-md transition duration-300 "
           >
             <div className="relative">
               <img

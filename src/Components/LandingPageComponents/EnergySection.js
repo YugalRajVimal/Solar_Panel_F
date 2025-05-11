@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { FaLeaf, FaHome, FaStar, FaBolt, FaUserCheck } from "react-icons/fa";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const features = [
   {
@@ -35,11 +39,70 @@ const features = [
 ];
 
 export default function EnergySection() {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        ".fade-up-left",
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".fade-up-left",
+            start: "top 85%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+
+      gsap.utils.toArray(".feature-card").forEach((el, i) => {
+        gsap.fromTo(
+          el,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            delay: i * 0.1,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 90%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      });
+
+      gsap.fromTo(
+        ".milestone-box",
+        { opacity: 0, scale: 0.9 },
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 0.8,
+          ease: "back.out(1.7)",
+          scrollTrigger: {
+            trigger: ".milestone-box",
+            start: "top 85%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    }, sectionRef);
+
+    return () => ctx.revert(); // Cleanup
+  }, []);
+
   return (
-    <section className="bg-white py-16 px-6">
+    <section className="bg-white py-16 px-6" ref={sectionRef}>
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
         {/* Left Content */}
-        <div>
+        <div className="fade-up-left">
           <p className="text-green-600 font-semibold mb-2">
             Making Tomorrow Different Today.
           </p>
@@ -48,27 +111,8 @@ export default function EnergySection() {
           </h2>
           <p className="text-gray-600 mb-6">
             In recent years, new capacity across the solar value chain has
-            become necessary to support the PV market’s growth. However, the
-            capital required to establish and scale-up wafer, solar cell, and
-            solar module manufacturing facilities is considerable. The high
-            upfront investment, coupled with volatile raw material prices,
-            intense global competition, and the need for cutting-edge
-            technology, adds financial pressure on solar manufacturers.
-            Moreover, evolving trade policies, supply chain disruptions, and the
-            demand for localized production further complicate operations.
-            Together, these factors pose a serious challenge to the sustainable
-            operation and growth of global solar manufacturers, calling for
-            strategic partnerships, supportive policy frameworks, and long-term
-            investment to ensure resilience and competitiveness. To overcome
-            these hurdles, the industry must also focus on workforce
-            development, R&D in next-generation solar technologies, and
-            increased automation to improve efficiency and cost-effectiveness
-            across the value chain while meeting climate and energy goals.
+            become necessary to support the PV market’s growth...
           </p>
-          {/* <p className="text-gray-600 mb-8">
-            Together, these factors pose a serious challenge to sustainable
-            operation and growth of global solar manufacturers.
-          </p> */}
           <button className="bg-green-600 text-white px-5 py-3 rounded-md font-semibold flex items-center gap-2 hover:bg-green-700 transition">
             ➜ Explore All Features!
           </button>
@@ -77,7 +121,7 @@ export default function EnergySection() {
         {/* Right Content */}
         <div className="grid sm:grid-cols-2 gap-6">
           {features.map((item, index) => (
-            <div key={index} className="flex flex-col gap-4 items-start">
+            <div key={index} className="feature-card flex flex-col gap-4 items-start">
               {item.icon}
               <div>
                 <h4 className="text-md font-semibold text-gray-900 mb-1">
@@ -87,7 +131,7 @@ export default function EnergySection() {
               </div>
             </div>
           ))}
-          <div className="bg-green-600 text-white rounded-lg p-6 flex flex-col justify-center">
+          <div className="milestone-box bg-green-600 text-white rounded-lg p-6 flex flex-col justify-center">
             <h4 className="text-lg font-semibold mb-2">Awards & Milestones</h4>
             <p>
               Benefiting from nearly <span className="font-bold">5+ years</span>{" "}

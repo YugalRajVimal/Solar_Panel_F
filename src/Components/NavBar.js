@@ -1,10 +1,25 @@
-import React, { useState } from "react";
-import { FaPhoneAlt, FaFacebookSquare } from "react-icons/fa";
-import { BsCart3 } from "react-icons/bs";
-import { MdEmail } from "react-icons/md";
+// import React, { useState } from "react";
+// import { FaPhoneAlt, FaFacebookSquare } from "react-icons/fa";
+// import { BsCart3 } from "react-icons/bs";
+// import { MdEmail } from "react-icons/md";
 import { FaClock } from "react-icons/fa6";
-import { RiMapPin2Fill, RiInstagramFill } from "react-icons/ri";
+// import { RiMapPin2Fill, RiInstagramFill } from "react-icons/ri";
+// import { FaSquareTwitter } from "react-icons/fa6";
+// import { HiMenuAlt3, HiX } from "react-icons/hi";
+
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  FaPhoneAlt,
+  FaFacebookSquare,
+} from "react-icons/fa";
 import { FaSquareTwitter } from "react-icons/fa6";
+
+import { MdEmail } from "react-icons/md";
+import {
+  RiMapPin2Fill,
+  RiInstagramFill,
+} from "react-icons/ri";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 const NavBar = () => {
@@ -13,7 +28,12 @@ const NavBar = () => {
   return (
     <>
       {/* Top Info Bar */}
-      <div className="w-full bg-gray-100 text-gray-700 text-xs px-4 md:px-10 py-2 flex flex-col md:flex-row justify-between items-center gap-2">
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+        className="w-full bg-gray-100 text-gray-700 text-xs px-4 md:px-10 py-2 flex flex-col md:flex-row justify-between items-center gap-2"
+      >
         <div className="flex flex-wrap gap-3 justify-center md:justify-start">
           <div className="flex items-center gap-1">
             <MdEmail />
@@ -34,10 +54,15 @@ const NavBar = () => {
           <RiInstagramFill className="hover:text-green-600 cursor-pointer" />
           <FaSquareTwitter className="hover:text-green-600 cursor-pointer" />
         </div>
-      </div>
+      </motion.div>
 
       {/* Main Nav */}
-      <div className="w-full bg-white shadow-md z-50">
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="w-full bg-white shadow-md z-50"
+      >
         <div className="max-w-7xl mx-auto px-4 md:px-10 flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center space-x-2">
@@ -46,16 +71,28 @@ const NavBar = () => {
 
           {/* Desktop Nav Links */}
           <nav className="hidden lg:flex gap-6 text-sm font-medium text-gray-700">
-            <a
-              href="/"
-              className="text-green-600 font-semibold border-b-2 border-green-500"
-            >
-              Home
-            </a>
-            <a href="/about-us">About Us</a>
-            <a href="#services">Services</a>
-            <a href="#projects">Projects</a>
-            <a href="/contact-us">Contact Us</a>
+            {[
+              { name: "Home", href: "/", active: true },
+              { name: "About Us", href: "/about-us" },
+              { name: "Services", href: "#services" },
+              { name: "Projects", href: "#projects" },
+              { name: "Contact Us", href: "/contact-us" },
+            ].map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className={`relative hover:text-green-600 transition-all ${
+                  link.active
+                    ? "text-green-600 font-semibold border-b-2 border-green-500"
+                    : ""
+                }`}
+              >
+                {link.name}
+                {!link.active && (
+                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-green-500 transition-all duration-300 hover:w-full"></span>
+                )}
+              </a>
+            ))}
           </nav>
 
           {/* Right Side - Actions */}
@@ -80,21 +117,30 @@ const NavBar = () => {
           </div>
         </div>
 
-        {/* Mobile Nav Links */}
-        {menuOpen && (
-          <div className="lg:hidden flex flex-col items-start gap-3 px-6 pb-4 text-sm font-medium text-gray-700 bg-white">
-            <a href="/" className="text-green-600 font-semibold">
-              Home
-            </a>
-            <a href="/about-us">About Us</a>
-            <a href="#services">Services</a>
-            <a href="#projects">Projects</a>
-            <a href="/contact-us">Contact Us</a>
-          </div>
-        )}
-      </div>
+        {/* Mobile Nav Links with Animation */}
+        <AnimatePresence>
+          {menuOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="lg:hidden flex flex-col items-start gap-3 px-6 pb-4 text-sm font-medium text-gray-700 bg-white overflow-hidden"
+            >
+              <a href="/" className="text-green-600 font-semibold">
+                Home
+              </a>
+              <a href="/about-us">About Us</a>
+              <a href="#services">Services</a>
+              <a href="#projects">Projects</a>
+              <a href="/contact-us">Contact Us</a>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.div>
     </>
   );
 };
 
 export default NavBar;
+
