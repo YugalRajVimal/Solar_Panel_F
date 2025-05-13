@@ -7,6 +7,8 @@ import ProjectsSlider from "./LandingPageComponents/ProjectSliders";
 import CustomerExperiences from "./LandingPageComponents/CustomerExperience";
 import RecentArticles from "./LandingPageComponents/RecentArticles";
 import CompanyInfoComponent from "./LandingPageComponents/CompanyInfoComponent";
+import { FaPhoneAlt } from "react-icons/fa";
+import { IoLogoWhatsapp } from "react-icons/io5";
 
 const LandingPage = () => {
   return (
